@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IntelliGraphs</title>
+</head>
+<body>
+    <h1>IntelliGraphs</h1>
+
+    <p>IntelliGraphs is a collection of datasets for benchmarking Knowledge Graph Generation models. It is a Python package that loads the datasets and verifies graphs using 
+logical rules expressed in First-Order Logical (FOL) rules. It can also be used as a testbed for developing new generative models.</p>
+
+    <h2>Long-term Storage of Datasets</h2>
+
+    <p>The datasets have been uploaded to Zenodo. Here is the <a href="https://doi.org/10.5281/zenodo.7824818">link</a> to the datasets.</p>
+
+    <h2>Advantages</h2>
+
+    <ul>
+        <li><strong>Easy to use:</strong> Generate and manipulate Knowledge Graphs with a simple and clean Python API.</li>
+        <li><strong>Flexible:</strong> Customize the number of graphs, triples, and data splits.</li>
+        <li><strong>Extendable:</strong> Create more graphs according to custom FOL rules.</li>
+        <li><strong>Efficient:</strong> Fast and memory-efficient graph generation and manipulation using native Python data structures.</li>
+        <li><strong>Visualization:</strong> Visualize Knowledge Graphs.</li>
+    </ul>
+
+    <h2>Installation</h2>
+
+    <p>To install IntelliGraphs using pip:</p>
+
+    <pre><code>pip install intelligraphs</code></pre>
+
+    <p>Or using conda:</p>
+
+    <pre><code>conda install -c thiv intelligraphs</code></pre>
+
+    <h2>Usage</h2>
+
+    <p>Here's a brief example of how to use various features of the IntelliGraphs library:</p>
+
+    <pre><code>// Python code goes here</code></pre>
+
+    <h2>IntelliGraphs Data Loader</h2>
+
+    <p>The <code>IntelliGraphsDataLoader</code> class is a utility for loading IntelliGraphs datasets, simplifying the process of accessing and organizing the data for 
+machine learning tasks. It provides functionalities to download, extract, and load the datasets into PyTorch tensors.</p>
+
+    <h3>Features and Benefits</h3>
+
+    <ul>
+        <li><strong>PyTorch Integration:</strong> Seamless integration with PyTorch for graph-based machine learning tasks.</li>
+        <li><strong>Configuration Options:</strong> Customizable options for batch size, padding, and shuffling.</li>
+        <li><strong>Reproducibility:</strong> Facilitates documentation and reproduction of experiments for improved research integrity.</li>
+        <li><strong>Data Preprocessing:</strong> Simplifies dataset preprocessing with automated download, extraction, and conversion.</li>
+    </ul>
+
+    <h3>Usage</h3>
+
+    <ol>
+        <li>Instantiate the DataLoader:</li>
+        <pre><code>from intelligraphs import IntelliGraphsDataLoader
+data_loader = IntelliGraphsDataLoader(dataset_name='syn-paths')</code></pre>
+        <li>Load the Data:</li>
+        <pre><code>train_loader, valid_loader, test_loader = data_loader.load_torch(
+    batch_size=32,
+    padding=True,
+    shuffle_train=False,
+    shuffle_valid=False,
+    shuffle_test=False
+)</code></pre>
+        <li>Access the Data:</li>
+        <pre><code>for batch in train_loader:
+    // Perform training steps with the batch
+
+for batch in valid_loader:
+    // Perform validation steps with the batch
+
+for batch in test_loader:
+    // Perform testing steps with the batch</code></pre>
+    </ol>
+
+    <h2>Datasets</h2>
+
+    <p>Information about the datasets goes here.</p>
+
+    <h2>Example</h2>
+
+    <p>Example of a knowledge graph goes here.</p>
+
+    <h2>First-Order Logic</h2>
+
+    <p>Explanation of First-Order Logic goes here.</p>
+
+    <h2>Baseline Models</h2>
+
+    <p>Information about the baseline models goes here.</p>
+
+    <h3>Prerequisites</h3>
+
+    <ul>
+        <li>Python 3.10</li>
+        <li>PyTorch 1.12</li>
+        <li>Weight & Biases</li>
+        <li>TQDM</li>
+    </ul>
+
+    <h3>Hyperparameters</h3>
+
+    <p>The hyperparameters for each experiment can be found under the <code>baselines/configs</code> folder.</p>
+
+    <h3>Experiments</h3>
+
+    <p>Commands to train and test the baseline models go here.</p>
+
+    <h2>Reporting Issues</h2>
+
+    <p>If you encounter any bugs or have any feature requests, please file an issue on the <a href="https://github.com/thiviyanT/IntelliGraphs/issues">GitHub 
+repository</a>.</p>
+
+    <h2>How to Cite</h2>
+
+    <p>If you use IntelliGraphs in your research, please cite the following paper:</p>
+
+    <pre>[ Submission under review. To be made available after acceptance.]</pre>
+
+    <h2>License</h2>
+
+    <p>IntelliGraphs is licensed under CC-BY License. See <a href="LICENSE">LICENSE</a> for more information.</p>
+
+    <p>Copyright (c) 2023 Thiviyan Thanapalasingam</p>
+</body>
+</html>
+
